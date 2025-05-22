@@ -43,16 +43,16 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden">
-            <ul className="flex flex-col space-y-2 py-2">
-              <li><a href="/" className="block text-white hover:text-yellow-400">Home</a></li>
-              <li><a href="#service" className="block text-white hover:text-yellow-400">Services</a></li>
-              <li><a href="#project" className="block text-white hover:text-yellow-400">Projects</a></li>
-              <li><a href="#team" className="block text-white hover:text-yellow-400">Our Team</a></li>
-              <li><a href="#contact" className="block text-white hover:text-yellow-400">Contact</a></li>
-            </ul>
-          </div>
-        )}
+  <div className="md:hidden bg-black text-white px-4 py-2">
+    <ul className="flex flex-col space-y-2">
+      <li><a href="/" className="block hover:text-yellow-400">Home</a></li>
+      <li><a href="#service" className="block hover:text-yellow-400">Services</a></li>
+      <li><a href="#project" className="block hover:text-yellow-400">Projects</a></li>
+      <li><a href="#team" className="block hover:text-yellow-400">Our Team</a></li>
+      <li><a href="#contact" className="block hover:text-yellow-400">Contact</a></li>
+    </ul>
+  </div>
+)}
       </div>
     </nav>
   );
