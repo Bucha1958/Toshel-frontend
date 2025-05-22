@@ -24,9 +24,9 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="w-full min-h-screen flex items-center justify-center bg-gray-100 px-6 py-16"
+      className="w-full min-h-screen flex items-center justify-center bg-gray-100 px-4 py-12 sm:px-6 sm:py-16"
     >
-      <div className="max-w-4xl w-full bg-white shadow-xl rounded-xl p-8 relative overflow-hidden">
+      <div className="w-full max-w-4xl bg-white shadow-xl rounded-xl p-4 sm:p-8 relative overflow-hidden">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -38,7 +38,7 @@ export default function Contact() {
           Get in Touch
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-8 relative z-10">
+        <div className="flex flex-col md:grid md:grid-cols-2 gap-8 relative z-10">
           {/* Contact Form */}
           <form className="space-y-4" onSubmit={handleSubmit}>
             <input

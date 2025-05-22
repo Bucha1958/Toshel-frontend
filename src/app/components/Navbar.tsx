@@ -1,10 +1,34 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+
+  // Close dropdown on scroll
+  useEffect(() => {
+    const handleScroll = (): void => {
+      if (isOpen) {
+        setIsOpen(false);
+      }
+    };
+
+    const handleClickOutside = (event: MouseEvent): void => {
+      // If the dropdown is open and the click is outside the nav element
+      if (isOpen && !(event.target as HTMLElement)?.closest("nav")) {
+        setIsOpen(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [isOpen]);
 
   return (
      <nav className="bg-white w-full fixed top-0 left-0 z-50">
