@@ -23,8 +23,9 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white"
+            className="md:hidden text-gray-800"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
           >
             ☰
           </button>   
@@ -33,8 +34,8 @@ export default function Navbar() {
           <ul className="hidden md:flex space-x-6">
             <li><Link href="/" className="text-black font-bold hover:text-blue-600">Home</Link></li>
             <Link href="#service" className="text-black font-bold hover:text-blue-600">
-    Services
-  </Link>
+              Services
+            </Link>
             <li><a href="#project" className="text-black font-bold hover:text-blue-600">Projects</a></li>
             <li><a href="#team" className="text-black font-bold hover:text-blue-600">Our Team</a></li>
             <li><a href="#contact" className="text-black font-bold hover:text-blue-600">Contact</a></li>
@@ -42,17 +43,59 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu */}
+       
         {isOpen && (
-  <div className="md:hidden bg-black text-white px-4 py-2">
-    <ul className="flex flex-col space-y-2">
-      <li><a href="/" className="block hover:text-yellow-400">Home</a></li>
-      <li><a href="#service" className="block hover:text-yellow-400">Services</a></li>
-      <li><a href="#project" className="block hover:text-yellow-400">Projects</a></li>
-      <li><a href="#team" className="block hover:text-yellow-400">Our Team</a></li>
-      <li><a href="#contact" className="block hover:text-yellow-400">Contact</a></li>
-    </ul>
-  </div>
-)}
+          <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg z-50 rounded-b-lg animate-slide-down">
+            <ul className="flex flex-col divide-y divide-gray-200">
+              <li>
+                <a
+                  href="/"
+                  onClick={() => setIsOpen(false)}
+                  className="block px-4 py-3 text-gray-800 font-semibold hover:bg-gray-100"
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#service"
+                  onClick={() => setIsOpen(false)}
+                  className="block px-4 py-3 text-gray-800 font-semibold hover:bg-gray-100"
+                >
+                  Services
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#project"
+                  onClick={() => setIsOpen(false)}
+                  className="block px-4 py-3 text-gray-800 font-semibold hover:bg-gray-100"
+                >
+                  Projects
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#team"
+                  onClick={() => setIsOpen(false)}
+                  className="block px-4 py-3 text-gray-800 font-semibold hover:bg-gray-100"
+                >
+                  Our Team
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  onClick={() => setIsOpen(false)}
+                  className="block px-4 py-3 text-gray-800 font-semibold hover:bg-gray-100"
+                >
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+        )}
+
       </div>
     </nav>
   );
