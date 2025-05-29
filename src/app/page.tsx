@@ -10,6 +10,7 @@ import Vision from "./components/Vision";
 import Contact from "./components/Contact";
 import Team from "./components/Team";
 import Testimonial from "./components/Testimonial";
+import ProjectCarousel from "./components/projectCarousel";
 
 
 export default function HomePage() {
@@ -18,7 +19,7 @@ export default function HomePage() {
       <Hero />
       <Feature />
       <Services />
-      <Projects />
+      <ProjectCarousel />
       <Vision />
       <Contact />
       <Team />
