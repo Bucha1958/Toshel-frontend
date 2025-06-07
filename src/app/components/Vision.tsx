@@ -7,7 +7,7 @@ export default function VisionSidebar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="fixed bottom-6 right-6 md:right-10 z-50">
+    <div className="fixed bottom-6 right-6 md:right-10 z-50 mt-2">
       {/* Floating Button */}
       <motion.button
         className="bg-blue-600 text-white px-6 py-3 rounded-full shadow-lg hover:bg-blue-700 transition"

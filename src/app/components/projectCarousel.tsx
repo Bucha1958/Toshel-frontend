@@ -58,31 +58,11 @@ export default function ProjectCarousel() {
                   </a>
                 </div>
               </div>
-              <svg
-                className="absolute bottom-0 left-0 w-full h-[100px] z-10"
-                viewBox="0 0 1440 100"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill="#ffffff"
-                  d="M0,0 C480,100 960,0 1440,100 L1440,100 L0,100 Z"
-                />
-              </svg>
+              
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
-      {/* <svg
-        className="absolute bottom-0 left-0 w-full h-[100px] z-20"
-        viewBox="0 0 1440 100"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          fill="#f8f9fa"
-          d="M0,0 C480,100 960,0 1440,100 L1440,100 L0,100 Z"
-        ></path>
-      </svg> */}
-
     </div>
   );
 }

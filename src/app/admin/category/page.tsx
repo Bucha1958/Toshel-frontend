@@ -19,7 +19,7 @@ export default function ListProject() {
 
         const fetchCategories = async () => {
             try {
-                const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URI}/api/projects/categories`);
+                const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URI}/api/categories`);
                 const data = await response.json();
                 setCategories(data?.categories);
             } catch (error) {

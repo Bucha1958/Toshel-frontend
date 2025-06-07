@@ -24,7 +24,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="w-full min-h-screen flex items-center justify-center bg-gray-100 px-4 py-12 sm:px-6 sm:py-16"
+      className="w-full min-h-screen flex items-center justify-center bg-gray-100 px-4 py-12 sm:px-6 sm:py-16 mt-8"
     >
       <div className="w-full max-w-4xl bg-white shadow-xl rounded-xl p-4 sm:p-8 relative overflow-hidden">
         <motion.div
