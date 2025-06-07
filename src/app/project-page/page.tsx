@@ -1,82 +1,3 @@
-// "use client"
-
-// import { useState } from 'react';
-// import ProjectContent from '../components/ProjectContent';
-// import ProjectFilter from '../components/ProjectFilter';
-
-// const allProjects = [
-//   {
-//     image: "/images/project2.jpg",
-//     title: "Asphalt Layering Full Project",
-//     description: "Infrasturcture"
-//   },
-//   {
-//     image: "/images/project2.jpg",
-//     title: "Bridge Construction",
-//     description: "Infrastructure"
-//   },
-//   {
-//     image: "/images/project2.jpg",
-//     title: "Industrial Complex",
-//     description: "Industry"
-//   },
-//   {
-//     image: "/images/project2.jpg",
-//     title: "Industrial Complex",
-//     description: "Industry"
-//   },
-//   {
-//     image: "/images/project2.jpg",
-//     title: "Industrial Complex",
-//     description: "Industry"
-//   },
-//   {
-//     image: "/images/project2.jpg",
-//     title: "Industrial Complex",
-//     description: "Industry"
-//   },
-//   {
-//     image: "/images/project2.jpg",
-//     title: "Industrial Complex",
-//     description: "Industry"
-//   },
-//   // {
-//   //   image: "/images/project2.jpg",
-//   //   title: "Industrial Complex",
-//   //   description: "Industry"
-//   // },
-//   // Add more if needed
-// ];
-// const filterOptions = ["All", "Industry", "Infrastructure", "Building"];
-
-
-// export default function ProjectsPage() {
-
-//   const [activeFilter, setActiveFilter] = useState("All");
-
-//   const filteredProjects =
-//   activeFilter === "All"
-//     ? allProjects
-//     : allProjects.filter(
-//         (project) =>
-//           project.description.toLowerCase() === activeFilter.toLowerCase()
-//       );
-
-
-//   return (
-//     <div className="px-4 py-8 max-w-7xl mx-auto">
-//       <h1 className="text-3xl font-bold text-center mb-6">All Projects</h1>
-//       <ProjectFilter
-//         filters={filterOptions}
-//         activeFilter={activeFilter}
-//         onFilterChange={setActiveFilter}
-//       />
-//       <ProjectContent projects={filteredProjects} showAll />
-//     </div>
-//   );
-// }
-
-
 "use client";
 
 import { useEffect, useState } from "react";
@@ -99,7 +20,7 @@ export default function ProjectsPage() {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await fetch("http://localhost:3500/api/projects");
+        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URI}/api/projects`);
         const data = await res.json();
 
         // Check if data.projects is an array
